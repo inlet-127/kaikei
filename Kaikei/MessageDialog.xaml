@@ -1,0 +1,25 @@
+﻿<Window x:Class="Kaikei.MessageDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kaikei"
+        mc:Ignorable="d"
+        Title="MessageDialog" Height="200" Width="400" ResizeMode="NoResize" >
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" Name="columm1"/>
+            <ColumnDefinition Width="200" Name="columm2"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="MessageBox" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" Text=""/>
+        <Button Name="CenterPntBtn" Content="OK" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="30" Width="100" HorizontalAlignment="Center" Visibility="Visible" Click="CenterPntBtn_Click"/>
+        <Button Name="LeftPntBtn" Content="OK" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Grid.RowSpan="2" Height="30" Width="100" HorizontalAlignment="Center" Visibility="Hidden" Click="LeftPntBtn_Click"/>
+        <Button Name="CancelBtn" Content="キャンセル" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="2" Height="30" Width="100" HorizontalAlignment="Center" Visibility="Hidden" Click="CancelBtn_Click"/>
+    </Grid>
+</Window>

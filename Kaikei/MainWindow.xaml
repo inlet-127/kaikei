@@ -1,0 +1,50 @@
+﻿<Window x:Class="Kaikei.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kaikei"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="FileUploader" Height="500" Width="800" ResizeMode="NoResize">
+    <Grid Background="AliceBlue">
+
+        <TabControl Margin="30,50,30,150">
+            <TabItem Header="内訳書" Height="Auto" Width="Auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="669.6"/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <UniformGrid Rows="5" Columns="3" Grid.ColumnSpan="3" Grid.Column="1">
+                        <CheckBox Content="①預貯金" VerticalAlignment="Center"/>
+                        <CheckBox Content="④-2 貸付金" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑧支払手形" VerticalAlignment="Center"/>
+                        <CheckBox Content="②受取手形" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑤棚卸資産" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑨買掛金・未払金" VerticalAlignment="Center"/>
+                        <CheckBox Content="③売掛金・未収入金" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑥有価証券" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑩-1 仮受金" VerticalAlignment="Center"/>
+                        <CheckBox Content="④-1 仮払金" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑦固定資産" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑩-2 源泉所得税預り金" VerticalAlignment="Center"/>
+                        <CheckBox Content="⑪借入金" VerticalAlignment="Center"/>
+                    </UniformGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="その他科目" Height="Auto" Width="Auto"/>
+            <TabItem Header="法人事業概況説明書" Height="Auto" Width="Auto"/>
+        </TabControl>
+
+        <TabControl Margin="30,330,30,60">
+            <TabItem Header="読み込み先" Height="Auto" Width="Auto"/>
+            <TabItem Header="出力フォルダ" Height="Auto" Width="Auto"/>
+        </TabControl>
+        <Grid Margin="540,420,30,15">
+            <Button Name="作成" Content="作成" Height="Auto" Width="100" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+            <Button Name="Close" Content="閉じる" Height="Auto" Width="100" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="Close_Click"/>
+        </Grid>
+    </Grid>
+</Window>
